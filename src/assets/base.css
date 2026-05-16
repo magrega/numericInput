@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+@theme {
+  --color-ink: #1e0e4c;
+  --color-accent: #906fee;
+  --color-accent-deep: #3d06d7;
+  --color-field: #cfcadf;
+  --default-transition-duration: 150ms;
+}

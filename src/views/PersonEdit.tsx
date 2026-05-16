@@ -23,25 +23,28 @@ export default function PersonEdit() {
         &larr; Back
       </Link>
 
-      <div className="flex items-center gap-3">
+      <div className="group flex items-center gap-3 text-ink">
         <img
-          src="/img.png"
+          src="/cat.jpg"
           alt={person.name}
-          className="w-14 h-14 rounded-full border-2 border-violet-500 object-cover"
+          className="size-20 rounded-full bg-gray-100 object-cover border-accent group-focus-within:ring-2 group-focus-within:ring-accent transition-all"
         />
+
         <div>
           <label
             htmlFor="hours-input"
-            className="block text-sm font-bold tracking-wide text-gray-700"
+            className="block font-bold tracking-wide mb-3 font-[Koulen] 
+            group-focus-within:text-accent-deep transition-colors"
           >
             {person.name.toUpperCase()} IS
           </label>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3 text-lg">
             <NumericInput
+              id="hours-input"
               value={person.ageInHours}
               onChange={(n) => updatePersonAge(person.id, n)}
             />
-            <span className="text-gray-600">hours old</span>
+            <span>hours old</span>
           </div>
         </div>
       </div>

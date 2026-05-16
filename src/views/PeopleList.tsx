@@ -18,12 +18,12 @@ export default function PeopleList() {
           <Link
             key={person.id}
             to={`/person/${person.id}`}
-            className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-violet-500"
+            className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-accent"
           >
             <img
-              src="/img.png"
+              src="/cat.jpg"
               alt={person.name}
-              className="w-10 h-10 rounded-full border-2 border-violet-500 object-cover"
+              className="size-10 rounded-full bg-gray-100 object-cover border-2 border-accent"
             />
             <div>
               <div className="font-bold text-gray-700">{person.name}</div>

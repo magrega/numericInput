@@ -9,7 +9,9 @@ export function formatGroupedDigits(digits: string): string {
   return parts.join(' ')
 }
 
-export function parseGroupedDigits(formatted: string): number {
+export function parseGroupedDigits(formatted: string, maxDigits = 15): number {
   const digits = formatted.replace(/\D/g, '')
-  return digits === '' ? 0 : Number(digits)
+  if (digits === '') return 0
+  const limited = digits.slice(0, maxDigits)
+  return Number(limited)
 }
